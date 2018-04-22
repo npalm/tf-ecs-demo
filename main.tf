@@ -4,7 +4,7 @@ provider "aws" {
 }
 
 module "vpc" {
-  source = "git::https://github.com/npalm/tf-aws-vpc.git?ref=1.0.0"
+  source = "git::https://github.com/npalm/tf-aws-vpc.git?ref=1.2.0"
 
   aws_region  = "${var.aws_region}"
   environment = "${var.environment}"
@@ -41,7 +41,7 @@ module "ecs-cluster" {
   subnets  = "${module.vpc.private_subnets}"
 
   asg_max     = 3
-  asg_desired = 3
+  asg_desired = 1
 }
 
 // Service running a graphql micro service
