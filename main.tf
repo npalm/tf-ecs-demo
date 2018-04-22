@@ -69,7 +69,7 @@ module "aws" {
   service_name   = "aws-service"
   image_url      = "npalm/ddr2017-aws-service:1.0.0"
   container_port = 8080
-  desired_count  = 1
+  desired_count  = 3
 
   aws_region  = "${var.aws_region}"
   environment = "${var.environment}"
