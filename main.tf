@@ -41,7 +41,7 @@ module "ecs-cluster" {
   subnets  = "${module.vpc.private_subnets}"
 
   asg_max     = 3
-  asg_desired = 1
+  asg_desired = 3
 }
 
 // Service running a graphql micro service
