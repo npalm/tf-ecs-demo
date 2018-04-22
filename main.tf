@@ -4,7 +4,7 @@ provider "aws" {
 }
 
 module "vpc" {
-  source = "git::https://github.com/npalm/tf-aws-vpc.git?ref=1.0.0"
+  source = "git::https://github.com/npalm/tf-aws-vpc.git?ref=1.2.0"
 
   aws_region  = "${var.aws_region}"
   environment = "${var.environment}"
